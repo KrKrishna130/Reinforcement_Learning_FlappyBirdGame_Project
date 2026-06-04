@@ -1,0 +1,14 @@
+flappybirdv0:
+  env_id: FlappyBird-v0  #ye wala id hm same agent py me diye hai
+  epsilon_init: 1 # initial value hai
+  epsilon_min: 0.05  # dhit=re km hote hote yah tk jaega
+  epsilon_decay: 0.9995
+  replay_memory_size: 100000
+  mini_batch_size: 32  # jo training hogi batch k form me hogi,uska sample kitna rahega size yah de rahe hai
+  network_sync_rate: 10  # kis interval  pr hm apni policy network and target network ko sync kargnge,policy-10 hoga  tabhi sonpshot ja kr uska cpoy bn kr target me store hoga
+  alpha: 0.001
+  gamma: 0.99
+  reward_threshold: 1000
+  # isme sare parameters de denge jo bad me update hote hai,
+  # ye Yaml file isliye bnate hai taki hm bad me kuch dusra value dena ho to bar bar
+  # flappy file me nii hm isme yaml me update krnge
